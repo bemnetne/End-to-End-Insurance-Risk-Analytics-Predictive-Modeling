@@ -32,7 +32,7 @@ MANIFEST
 *.manifest
 *.spec
 
-data/
+# data/
 *.csv
 
 # Installer logs
