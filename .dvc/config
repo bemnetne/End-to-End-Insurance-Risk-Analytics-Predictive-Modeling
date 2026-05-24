@@ -1,0 +1,4 @@
+[core]
+    remote = dvc-remote
+['remote "dvc-remote"']
+    url = C:\Users\bemnet\Desktop\10academy\week3\dvc-storage\
