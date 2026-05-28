@@ -32,7 +32,14 @@ def handle_missing_values(df, numerical_cols, categorical_cols):
 
     # Numerical columns
     for col in numerical_cols:
+        df[col] = (
+            df[col]
+            .astype(str)
+            .str.replace(" ", "")
+            .str.replace(",", ".", regex=False)
+        )
 
+        df[col] = pd.to_numeric(df[col], errors="coerce")
         if col in df.columns:
 
             df[col] = df[col].fillna(
